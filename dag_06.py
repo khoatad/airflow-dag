@@ -20,7 +20,8 @@ dag = DAG(
     dag_id=default_dag_id,
     default_args=default_args,
     start_date=datetime(2019, 6, 17),
-    schedule_interval=timedelta(seconds=5)
+    schedule_interval=timedelta(seconds=5),
+    catchup=True
 )
 
 
