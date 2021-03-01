@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from airflow.models import DAG
 from airflow.operators.bash_operator import BashOperator
-from airflow.operators import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 
 # let's setup arguments for our dag
