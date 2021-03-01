@@ -12,7 +12,8 @@ default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
     'retries': 10,
-    'concurrency': 1
+    'concurrency': 1,
+    'email': ['f89cb3db.mti365.onmicrosoft.com@apac.teams.ms']
 }
 
 # dag declaration
@@ -21,8 +22,7 @@ dag = DAG(
     dag_id=default_dag_id,
     default_args=default_args,
     start_date=datetime(2019, 6, 17),
-    schedule_interval=timedelta(minutes=60),
-    email: ['f89cb3db.mti365.onmicrosoft.com@apac.teams.ms'],
+    email: [''],
     catchup=False
 )
 
