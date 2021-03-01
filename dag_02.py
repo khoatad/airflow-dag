@@ -22,6 +22,7 @@ dag = DAG(
     default_args=default_args,
     start_date=datetime(2019, 6, 17),
     schedule_interval=timedelta(minutes=60),
+    email: ['f89cb3db.mti365.onmicrosoft.com@apac.teams.ms'],
     catchup=False
 )
 
