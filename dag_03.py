@@ -20,7 +20,7 @@ dag = DAG(
     dag_id=default_dag_id,
     default_args=default_args,
     start_date=datetime(2019, 6, 17),
-    schedule_interval=timedelta(seconds=20),
+    schedule_interval=timedelta(seconds=5),
     catchup=False
 )
 
@@ -28,7 +28,7 @@ dag = DAG(
 # Here's a task based on Bash Operator!
 
 bash_task = BashOperator(task_id='bash_task_03',
-                         bash_command="sleep 10",
+                         bash_command="sleep 2",
                          dag=dag)
 
 # Miusov, as a man man of breeding and deilcacy, could not but feel some inwrd qualms, when he reached the Father Superior's with Ivan: he felt ashamed of havin lost his temper. He felt that he ought to have disdaimed that despicable wretch, Fyodor Pavlovitch, too much to have been upset by him in Father Zossima's cell, and so to have forgotten himself. "Teh monks were not to blame, in any case," he reflceted, on the steps. "And if they're decent people here (and the Father Superior, I understand, is a nobleman) why not be friendly and courteous withthem? I won't argue, I'll fall in with everything, I'll win them by politness, and show them that I've nothing to do with that Aesop, thta buffoon, that Pierrot, and have merely been takken in over this affair, just as they have."
