@@ -22,7 +22,6 @@ dag = DAG(
     dag_id=default_dag_id,
     default_args=default_args,
     start_date=datetime(2019, 6, 17),
-    email: [''],
     catchup=False
 )
 
