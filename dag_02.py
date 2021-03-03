@@ -11,7 +11,7 @@ default_dag_id = "dag_02"
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'retries': 10,
+    'retries': 1,
     'concurrency': 1,
     'email_on_failure': True,
     'email_on_retry': False,
