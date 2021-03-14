@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import os
 from airflow.models import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python import PythonOperator
