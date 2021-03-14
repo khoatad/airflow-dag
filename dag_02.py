@@ -3,19 +3,26 @@ from airflow.models import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
+from airflow.utils.dates import days_ago
 
 # let's setup arguments for our dag
 
 default_dag_id = "dag_02"
 
-default_args = {
-    'owner': 'airflow',
+
+global_default_args = {
+    'owner': 'etl',
     'depends_on_past': False,
-    'retries': 1,
-    'concurrency': 1,
+    'start_date': days_ago(1),
+    'retries': 2,
+    'retry_delay': timedelta(minutes=1),
     'email_on_failure': True,
     'email_on_retry': False,
     'email': ['f89cb3db.mti365.onmicrosoft.com@apac.teams.ms']
+}
+
+default_args = {
+  **global_default_args
 }
 
 # dag declaration
