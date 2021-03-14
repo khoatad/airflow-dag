@@ -18,7 +18,7 @@ global_default_args = {
     'retry_delay': timedelta(minutes=1),
     'email_on_failure': True,
     'email_on_retry': False,
-    'email': ['f89cb3db.mti365.onmicrosoft.com@apac.teams.ms']
+    'email': [ str(os.environ.get('ETL_SENDGRID_MAIL_TO')) ]
 }
 
 default_args = {
